@@ -5,18 +5,21 @@
 
 .navbar-collapse {
   justify-content: end;
+  font-weight: 700;
 }
+
+/*titulos y textos*/
 
 .titulos-h1 {
   text-align: center;
   font-size: 6rem;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .titulos-h2 {
   text-align: center;
   font-size: 3rem;
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .titulos-h3{
@@ -27,6 +30,9 @@
 
 .textos {
   text-align: center;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: rgb(5, 45, 4); 
 }
 
 /*galeria*/
@@ -90,6 +96,134 @@
   transform: translate(0,0);
 }
 
+/*casos de uso texto sobre imagen*/
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right,rgb(0 0 0 / .5),rgb(0 0 0 / .5)),url(/images/casosdeuso.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.wrap-texto {
+  color: white  ;
+  text-align: center;
+  width: 50%;
+}
+
+/* estilo de la pagina contacto*/
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  width: 50%;
+  margin: 50px 0 50px 50px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(39, 150, 65, 0.632);
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.imagen-fondo {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 95%;
+  z-index: -1;
+  object-fit: cover;
+  width: 40%;
+}
+
+/*Estilo de solapa descargas*/
+.container-descargas {
+  background-color: #1cad59; /* Establece el color de fondo */
+  color: #ffffff; /* Establece el color del texto */
+  padding: 20px; /* Añade un poco de espacio entre el contenido y el borde del elemento */
+  text-align: center;
+}
+
+/*Estilo de la solapa descargas para el acordeon*/
+.accordion {
+  max-width: 600px; /* Cambia el ancho máximo del accordion */
+  margin: 0 auto; /* Centra el accordion horizontalmente */
+}
+
+.accordion-button {
+  background-color: #eee; /* Cambia el color de fondo de los botones */
+  color: #127b2d; /* Cambia el color del texto de los botones */
+  border: none; /* Elimina los bordes de los botones */
+  border-radius: 0; /* Elimina el redondeo de las esquinas de los botones */
+  padding: 1rem; /* Añade un espacio de relleno interno a los botones */
+  font-size: 1.2rem; /* Cambia el tamaño de la fuente del texto de los botones */
+}
+
+.accordion-button:hover {
+  background-color: #ddd; /* Cambia el color de fondo de los botones cuando se les pasa el mouse por encima */
+  color: #222222; /* Cambia el color del texto de los botones cuando se les pasa el mouse por encima */
+}
+
+.accordion-item {
+  background-color: #f9f9f9; /* Cambia el color de fondo de los elementos del accordion */
+  border: none; /* Elimina los bordes de los elementos del accordion */
+  border-radius: 0; /* Elimina el redondeo de las esquinas de los elementos del accordion */
+}
+
+.accordion-body {
+  padding: 1rem; /* Añade un espacio de relleno interno al contenido del accordion */
+  font-size: 1.1rem; /* Cambia el tamaño de la fuente del contenido del accordion */
+  line-height: 1.5; /* Ajusta el interlineado del contenido del accordion */
+}
+
+
+/*Estilo de solapa comprar*/
+.container-comprar {
+  background-color: #1cad59; /* Establece el color de fondo */
+  color: #ffffff; /* Establece el color del texto */
+  padding: 20px; /* Añade un poco de espacio entre el contenido y el borde del elemento */
+  text-align: center;
+}
+
+
+/* estilo para los videos cargados desde youtube*/
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /*footer*/ 
 
 .footer {
@@ -109,71 +243,5 @@
     color: #2b533f;
   }
 
-
-/*variables*/
-/* *
-
-  main {
-    margin: 10px;
-  }
-
-  nav ul li {
-      display: inline-block;
-      margin: -35px;
-  }
-
-  nav ul li a{
-      color: #168e42;
-      display: block;
-      padding: 1px 125px;
-      text-decoration: none;
-  }
-
-  .nav-item {
-    padding-right: 90px;
-  }
-
-  .logochianav {
-    margin: -11px;
-    margin-left: 79px;
-  }
-
-  a:hover {
-      color:rgb(103, 153, 103)
-  }
-  p::selection {
-      background: rgb(240, 235, 235);
-      color: rgb(40, 37, 37);
-      text-shadow: 1px 1px #fff;
-  }
-  body {
-      background-color: $verdechia;
-      font-family: 'Poppins', sans-serif;
-      color: #83f3bb;
-    }
-    p, 
-  ul {
-    border: 2px solid rgba(117, 158, 143, 0);
-    padding: .5em;
-  }
-
-  .block,
-  li {
-    border: 2px solid rgb(60, 170, 130)
-
-    }
-
-  ul {
-    display: flex;
-    list-style: none;
-  }
-
-  .block {
-    display: inline;
-  }      
-
-
-
-  } */
 
 /*# sourceMappingURL=style.css.map */
