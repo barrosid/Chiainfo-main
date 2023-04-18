@@ -1,0 +1,42 @@
+.container-descargas {
+    background-color: #1cad59; /* Establece el color de fondo */
+    color: #ffffff; /* Establece el color del texto */
+    padding: 20px; /* Añade un poco de espacio entre el contenido y el borde del elemento */
+    text-align: center;
+  }
+  
+  /*Estilo de la solapa descargas para el acordeon*/
+  .accordion {
+    max-width: 600px; /* Cambia el ancho máximo del accordion */
+    margin: 0 auto; /* Centra el accordion horizontalmente */
+        .accordion-button {
+            background-color: #eee; /* Cambia el color de fondo de los botones */
+            color: #127b2d; /* Cambia el color del texto de los botones */
+            border: none; /* Elimina los bordes de los botones */
+            border-radius: 0; /* Elimina el redondeo de las esquinas de los botones */
+            padding: 1rem; /* Añade un espacio de relleno interno a los botones */
+            font-size: 1.2rem; /* Cambia el tamaño de la fuente del texto de los botones */
+        }
+        .accordion-item {
+            background-color: #f9f9f9; /* Cambia el color de fondo de los elementos del accordion */
+            border: none; /* Elimina los bordes de los elementos del accordion */
+            border-radius: 0; /* Elimina el redondeo de las esquinas de los elementos del accordion */
+          }
+          
+        .accordion-body {
+            padding: 1rem; /* Añade un espacio de relleno interno al contenido del accordion */
+            font-size: 1.1rem; /* Cambia el tamaño de la fuente del contenido del accordion */
+            line-height: 1.5; /* Ajusta el interlineado del contenido del accordion */
+          }  
+
+
+
+
+  }
+  
+
+  .accordion-button:hover {
+    background-color: #ddd; /* Cambia el color de fondo de los botones cuando se les pasa el mouse por encima */
+    color: #222222; /* Cambia el color del texto de los botones cuando se les pasa el mouse por encima */
+  }
+  
