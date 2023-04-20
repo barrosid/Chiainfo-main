@@ -1,0 +1,18 @@
+.wrap {
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right,rgb(0 0 0 / .5),rgb(0 0 0 / .5)),url(/images/casosdeuso.png);
+    background-size: cover;
+    background-position: center;
+    .wrap-texto {
+        color: white  ;
+        text-align: center;
+        width: 50%;
+      }
+  }
+  
+  
+  

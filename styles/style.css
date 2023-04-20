@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,6 @@
 }
 
 /*titulos y textos*/
-
 .titulos-h1 {
   text-align: center;
   font-size: 6rem;
@@ -22,7 +22,7 @@
   margin-top: 60px;
 }
 
-.titulos-h3{
+.titulos-h3 {
   text-align: center;
   font-size: 3rem;
   margin-top: 70px;
@@ -32,10 +32,51 @@
   text-align: center;
   font-size: 1rem;
   margin-top: 10px;
-  color: rgb(5, 45, 4); 
+  color: rgb(5, 45, 4);
 }
 
-/*galeria*/
+.footer {
+  font-size: 1.5rem;
+  padding-right: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  padding: 10px 50px;
+  color: rgb(61, 171, 63);
+}
+
+body {
+  background-color: rgb(241, 234, 234);
+  font-family: "Poppins", sans-serif;
+  color: #2b533f;
+}
+
+.shake {
+  text-align: center;
+  font-size: 5vw;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate(-1px, 0);
+  }
+  20%, 80% {
+    transform: translate(2px, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate(-4px, 0);
+  }
+  40%, 60% {
+    transform: translate(4px, 0);
+  }
+}
+.shake:hover {
+  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate(0, 0);
+}
 
 .gallery-container {
   display: grid;
@@ -43,7 +84,6 @@
   grid-template-rows: repeat(2, 1fr);
   gap: 10px;
 }
-
 .gallery-container img {
   width: 100%;
   height: 100%;
@@ -53,68 +93,46 @@
 .gallery-container img:hover {
   transform: scale(1.1);
   transition: transform 0.5s ease;
-  box-shadow: 0 0 20px 1px rgb(0 0 0 / 70%);
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.7);
   filter: sepia(1);
 }
 
-/*animacion planta de menu*/
-
-.shake   {
+.container-descargas {
+  background-color: #1cad59; /* Establece el color de fondo */
+  color: #ffffff; /* Establece el color del texto */
+  padding: 20px; /* Añade un poco de espacio entre el contenido y el borde del elemento */
   text-align: center;
 }
 
-@keyframes shake {
-  10%,
-  90% {
-    transform: translate(-1px, 0);
-  }
-
-  20%,
-  80%{
-    transform: translate(2px, 0);
-  }
-
-  30%,
-  50%
-  70%{
-    transform: translate(-4px, 0);
-  }
-
-  40%,
-  60%{
-    transform: translate(4px, 0);
-  }
+/*Estilo de la solapa descargas para el acordeon*/
+.accordion {
+  max-width: 600px; /* Cambia el ancho máximo del accordion */
+  margin: 0 auto; /* Centra el accordion horizontalmente */
+}
+.accordion .accordion-button {
+  background-color: #eee; /* Cambia el color de fondo de los botones */
+  color: #127b2d; /* Cambia el color del texto de los botones */
+  border: none; /* Elimina los bordes de los botones */
+  border-radius: 0; /* Elimina el redondeo de las esquinas de los botones */
+  padding: 1rem; /* Añade un espacio de relleno interno a los botones */
+  font-size: 1.2rem; /* Cambia el tamaño de la fuente del texto de los botones */
+}
+.accordion .accordion-item {
+  background-color: #f9f9f9; /* Cambia el color de fondo de los elementos del accordion */
+  border: none; /* Elimina los bordes de los elementos del accordion */
+  border-radius: 0; /* Elimina el redondeo de las esquinas de los elementos del accordion */
+}
+.accordion .accordion-body {
+  padding: 1rem; /* Añade un espacio de relleno interno al contenido del accordion */
+  font-size: 1.1rem; /* Cambia el tamaño de la fuente del contenido del accordion */
+  line-height: 1.5; /* Ajusta el interlineado del contenido del accordion */
 }
 
-.shake {
-  font-size: 5vw;
-  cursor: pointer; 
+.accordion-button:hover {
+  background-color: #ddd; /* Cambia el color de fondo de los botones cuando se les pasa el mouse por encima */
+  color: #222222; /* Cambia el color del texto de los botones cuando se les pasa el mouse por encima */
 }
 
-.shake:hover {
-  animation: shake 1s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  transform: translate(0,0);
-}
-
-/*casos de uso texto sobre imagen*/
-.wrap {
-  width: 100vw;
-  height: 100vh;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to right,rgb(0 0 0 / .5),rgb(0 0 0 / .5)),url(/images/casosdeuso.png);
-  background-size: cover;
-  background-position: center;
-}
-
-.wrap-texto {
-  color: white  ;
-  text-align: center;
-  width: 50%;
-}
-
-/* estilo de la pagina contacto*/
 .container {
   display: flex;
   flex-direction: row;
@@ -129,7 +147,7 @@ form {
   box-shadow: 0px 0px 5px 0px rgba(39, 150, 65, 0.632);
 }
 
-input[type="text"], textarea {
+input[type=text], textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -138,7 +156,7 @@ input[type="text"], textarea {
   resize: none;
 }
 
-input[type="submit"] {
+input[type=submit] {
   background-color: #4CAF50;
   color: #fff;
   padding: 12px 20px;
@@ -157,55 +175,12 @@ input[type="submit"] {
   width: 40%;
 }
 
-/*Estilo de solapa descargas*/
-.container-descargas {
-  background-color: #1cad59; /* Establece el color de fondo */
-  color: #ffffff; /* Establece el color del texto */
-  padding: 20px; /* Añade un poco de espacio entre el contenido y el borde del elemento */
-  text-align: center;
-}
-
-/*Estilo de la solapa descargas para el acordeon*/
-.accordion {
-  max-width: 600px; /* Cambia el ancho máximo del accordion */
-  margin: 0 auto; /* Centra el accordion horizontalmente */
-}
-
-.accordion-button {
-  background-color: #eee; /* Cambia el color de fondo de los botones */
-  color: #127b2d; /* Cambia el color del texto de los botones */
-  border: none; /* Elimina los bordes de los botones */
-  border-radius: 0; /* Elimina el redondeo de las esquinas de los botones */
-  padding: 1rem; /* Añade un espacio de relleno interno a los botones */
-  font-size: 1.2rem; /* Cambia el tamaño de la fuente del texto de los botones */
-}
-
-.accordion-button:hover {
-  background-color: #ddd; /* Cambia el color de fondo de los botones cuando se les pasa el mouse por encima */
-  color: #222222; /* Cambia el color del texto de los botones cuando se les pasa el mouse por encima */
-}
-
-.accordion-item {
-  background-color: #f9f9f9; /* Cambia el color de fondo de los elementos del accordion */
-  border: none; /* Elimina los bordes de los elementos del accordion */
-  border-radius: 0; /* Elimina el redondeo de las esquinas de los elementos del accordion */
-}
-
-.accordion-body {
-  padding: 1rem; /* Añade un espacio de relleno interno al contenido del accordion */
-  font-size: 1.1rem; /* Cambia el tamaño de la fuente del contenido del accordion */
-  line-height: 1.5; /* Ajusta el interlineado del contenido del accordion */
-}
-
-
-/*Estilo de solapa comprar*/
 .container-comprar {
   background-color: #1cad59; /* Establece el color de fondo */
   color: #ffffff; /* Establece el color del texto */
   padding: 20px; /* Añade un poco de espacio entre el contenido y el borde del elemento */
   text-align: center;
 }
-
 
 /* estilo para los videos cargados desde youtube*/
 .video-container {
@@ -214,7 +189,6 @@ input[type="submit"] {
   height: 0;
   padding-bottom: 56.25%; /* Aspect ratio 16:9 */
 }
-
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -224,24 +198,20 @@ input[type="submit"] {
   border: none;
 }
 
-/*footer*/ 
-
-.footer {
-  font-size: 1.5rem;
-  padding-right:  50px;
-  display:flex;
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  }
-  a i{
-  padding: 10px 50px;
-  color: rgb(61, 171, 63); 
-  }
-
-  body {
-    background-color: rgb(241, 234, 234);
-    font-family: 'Poppins', sans-serif;
-    color: #2b533f;
-  }
-
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/casosdeuso.png);
+  background-size: cover;
+  background-position: center;
+}
+.wrap .wrap-texto {
+  color: white;
+  text-align: center;
+  width: 50%;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-collapse {
+    justify-content: end;
+    font-weight: 700;
+  }
+
+    
+  /*titulos y textos*/
+  
+  .titulos-h1 {
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 70px;
+  }
+  
+  .titulos-h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 60px;
+  }
+  
+  .titulos-h3{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 70px;
+  }
+  
+  .textos {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 10px;
+    color: rgb(5, 45, 4); 
+  }
+
+  .footer {
+    font-size: 1.5rem;
+    padding-right:  50px;
+    display:flex;
+    justify-content: center;
+    }
+      i{
+        padding: 10px 50px;
+        color: rgb(61, 171, 63); 
+
+      }
+   
+  
+  body {
+    background-color: rgb(241, 234, 234);
+    font-family: 'Poppins', sans-serif;
+    color: #2b533f;
+    }

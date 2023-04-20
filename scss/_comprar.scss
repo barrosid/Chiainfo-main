@@ -1,0 +1,25 @@
+.container-comprar {
+    background-color: #1cad59; /* Establece el color de fondo */
+    color: #ffffff; /* Establece el color del texto */
+    padding: 20px; /* Añade un poco de espacio entre el contenido y el borde del elemento */
+    text-align: center;
+  }
+  
+  
+  /* estilo para los videos cargados desde youtube*/
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+        iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+  }
+  
+  
